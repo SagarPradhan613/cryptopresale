@@ -53,6 +53,82 @@ body {
   z-index: 20;
 }
 
+/* .top-left-cut-index {
+  position: absolute;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  border-bottom: 1px solid #FFFFFF1A;
+} */
+
+.top-left-cut-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to bottom right, #23252A 0%, #23252A calc(50% - 0.5px), #FFFFFF1A calc(50% - 0.5px), #FFFFFF1A calc(50% + 0.5px), #191B20 calc(50% + 0.5px), #191B20 100%);
+}
+
+.dark .top-left-cut-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to bottom right, #EFEFEF 0%, #EFEFEF calc(50% - 0.5px), #FFFFFF1A calc(50% - 0.5px), #FFFFFF1A calc(50% + 0.5px), white calc(50% + 0.5px), white 100%);
+}
+
+.bottom-right-cut-index {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom right, #23252A 0%, #23252A calc(50% - 0.5px), #FFFFFF1A calc(50% - 0.5px), #FFFFFF1A calc(50% + 0.5px), #191B20 calc(50% + 0.5px), #191B20 100%);
+}
+
+.dark .bottom-right-cut-index {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom right, #EFEFEF 0%, #EFEFEF calc(50% - 0.5px), #FFFFFF1A calc(50% - 0.5px), #FFFFFF1A calc(50% + 0.5px), white calc(50% + 0.5px), white 100%);
+}
+
+.bottom-right-cut-index-textarea {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  z-index: 20;
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom right, #23252A 0%, #23252A calc(50% - 0.5px), #FFFFFF1A calc(50% - 0.5px), #FFFFFF1A calc(50% + 0.5px), #191B20 calc(50% + 0.5px), #191B20 100%);
+}
+
+.dark .bottom-right-cut-index-textarea {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  z-index: 20;
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom right, #EFEFEF 0%, #EFEFEF calc(50% - 0.5px), #FFFFFF1A calc(50% - 0.5px), #FFFFFF1A calc(50% + 0.5px), white calc(50% + 0.5px), white 100%);
+}
+
+
 .bottom-right-cut {
   position: absolute;
   clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -63,6 +139,8 @@ body {
   z-index: 20;
   transform: rotate(180deg);
 }
+
+
 
 .bottom-right-cut-sm {
   position: absolute;
@@ -263,4 +341,31 @@ body {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+}
+
+input::placeholder {
+  opacity: 0.3;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+
+.dark input::placeholder {
+  color: black;
+}
+
+textarea::placeholder {
+  opacity: 0.3;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+
+.dark textarea::placeholder {
+  color: black;
+}
+
+input:focus{
+  outline: none !important;
+  border: none !important;
 }
